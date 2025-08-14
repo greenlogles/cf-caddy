@@ -1,7 +1,8 @@
 FROM caddy:2-builder AS builder
 
 RUN xcaddy build \
-    --with github.com/caddy-dns/cloudflare
+    --with github.com/caddy-dns/cloudflare \
+    --with github.com/caddyserver/transform-encoder
 
 FROM caddy:2
 
